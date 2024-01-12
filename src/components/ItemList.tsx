@@ -8,8 +8,6 @@ interface Props {
 export const ItemList = ({ object }: Props) => {
   const [open, setOpen] = useState(false);
 
-  console.log("Object: ", object);
-
   return (
     <>
       <ul className="max-w-xs md:max-w-md divide-y divide-gray-200 dark:divide-gray-700">
@@ -75,9 +73,7 @@ export const ItemList = ({ object }: Props) => {
         </li>
       </ul>
 
-      {open && (
-        <Detail name={object.name} title={object.title} />
-      )}
+      {open && <Detail name={object.name} title={object.title} />}
     </>
   );
 };

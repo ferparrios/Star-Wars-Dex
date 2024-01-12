@@ -8,13 +8,11 @@ import { Header } from "../components/Header";
 export const ListPage = () => {
   const [isLoading, setIsLoading] = useState(true);
   const { id } = useParams();
-  // console.log("id: ", id);
   const [data, setData] = useState<[]>([]);
   useEffect(() => {
     const loadData = async () => {
       const res = await getData(id);
       setData(res.data.results);
-      // console.log(res.data.results)
       setIsLoading(false);
     };
     loadData();
