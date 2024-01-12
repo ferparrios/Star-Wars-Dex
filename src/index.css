@@ -1,0 +1,50 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "Star Jedi V2";
+  src: url("https://db.onlinewebfonts.com/t/0c724f6aa457310440cf8949c615cbd7.eot");
+  src: url("https://db.onlinewebfonts.com/t/0c724f6aa457310440cf8949c615cbd7.eot?#iefix")
+      format("embedded-opentype"),
+    url("https://db.onlinewebfonts.com/t/0c724f6aa457310440cf8949c615cbd7.woff2")
+      format("woff2"),
+    url("https://db.onlinewebfonts.com/t/0c724f6aa457310440cf8949c615cbd7.woff")
+      format("woff"),
+    url("https://db.onlinewebfonts.com/t/0c724f6aa457310440cf8949c615cbd7.ttf")
+      format("truetype"),
+    url("https://db.onlinewebfonts.com/t/0c724f6aa457310440cf8949c615cbd7.svg#Star Jedi V2")
+      format("svg");
+}
+body {
+  background-image: url("../src/assets/img/starry-night-sky.jpg");
+  font-family: "Star Jedi V2";
+}
+
+.text-shadow-sw {
+  color: black;
+  text-shadow: 1px 1px 0 #ffe81f, -1px 1px 0 #ffe81f, -1px -1px 0 #ffe81f,
+    1px -1px 0 #ffe81f;
+}
+
+.img-border {
+  border-color: #ffe81f solid 1px;
+}
+
+
+.fade-in {
+	opacity: 1;
+	animation-name: fadeInOpacity;
+	animation-iteration-count: 1;
+	animation-timing-function: ease-out;
+	animation-duration: 2s;
+}
+
+@keyframes fadeInOpacity {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
