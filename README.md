@@ -1,31 +1,49 @@
-# React + TypeScript + Vite
+# Welcome to Star Wars Dex!
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Hi, I'm using the Star Wars API for show the information that they provide us, just to be clear, the API doesn't provide images or descriptions about any element, so the images are mocked, please enjoy the app and I gonna wait your comments, thanks.
 
-Currently, two official plugins are available:
+**Fernando Paredes Rios**
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
-## Expanding the ESLint configuration
+# How to use the app?
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+You can access to the deployer version of the app on the next link [star-wars-dex-link](https://star-wars-dex.vercel.app/)
 
-- Configure the top-level `parserOptions` property like this:
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
+## What if I want to run the app on my machine?
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
-# Star-Wars-Dex
+You can clone the present repository and follow the next steps.
+
+    -> cd star-wars-dex
+    -> yarn install or yarn
+    -> yarn dev
+
+## The solution to the question on the PDF
+
+I add here the responses for the questions:
+
+**What's a closure?**
+
+ - A closure is a function inside another function than allows the child function access to the variables of the parent function
+
+**Where in the code is there a closure?**
+
+ - Inside the UseEffect hook, who is also a function I use another one and this function can access to the variables that I can declare inside the useEffect hook.
+
+    useEffect(() => {
+		const  loadData  =  async () => {
+		const  res  =  await  getData(id);
+		setData(res.data.results);
+		setIsLoading(false);
+	};
+	loadData();
+}, []);
+
+**Which are the potential side-effects in any function?**
+
+ - Some of the effect can be, modifying external variables or global
+   variables if the parent function work with this type of variables.
+
+**Could you point out any of these cases in your code? Are they expected? Can they be avoided?**
+
+ - Like I said about the useEffect or the functions inside of the useEffect, they can modify the states for example, if any of them call a setState inside, but in this case is expected that and because I loading data I think that is not necessary avoid this.
